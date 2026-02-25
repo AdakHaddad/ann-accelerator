@@ -1,0 +1,15 @@
+# Vivado generated/build outputs (should not be versioned)
+*.runs/
+*.cache/
+*.hw/
+*.sim/
+*.ip_user_files/
+*.srcs/*/ip_user_files/
+*.srcs/*/bd/*/hw_handoff/
+*.jou
+*.log
+
+# optional (often large)
+*.str
+*.bit
+*.bin
