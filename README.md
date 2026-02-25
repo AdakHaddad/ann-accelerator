@@ -11,8 +11,8 @@ Generated Mermaid files:
 - `docs/bd/ASSEMBLY_11.tcl.mmd`
 - `docs/bd/ASSEMBLY_6.tcl.mmd`
 - `docs/bd/ASSEMBLY_8.tcl.mmd`
-- `docs/bd/design_2.tcl.mmd`
 - `docs/bd/MASNYA.tcl.mmd`
+- `docs/bd/design_2.tcl.mmd`
 
 Preview (first diagram):
 
