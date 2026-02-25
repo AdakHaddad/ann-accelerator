@@ -8,11 +8,11 @@ This repository contains the source code and resources for the inference 6x6 ANN
 
 Generated Mermaid files:
 
-- C:/altera/13.1/MSIB/vivado/AllSystolic6x6/docs/bd/ASSEMBLY_11.tcl.mmd
-- C:/altera/13.1/MSIB/vivado/AllSystolic6x6/docs/bd/ASSEMBLY_6.tcl.mmd
-- C:/altera/13.1/MSIB/vivado/AllSystolic6x6/docs/bd/ASSEMBLY_8.tcl.mmd
-- C:/altera/13.1/MSIB/vivado/AllSystolic6x6/docs/bd/design_2.tcl.mmd
-- C:/altera/13.1/MSIB/vivado/AllSystolic6x6/docs/bd/MASNYA.tcl.mmd
+- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/ASSEMBLY_11.tcl.mmd
+- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/ASSEMBLY_6.tcl.mmd
+- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/ASSEMBLY_8.tcl.mmd
+- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/MASNYA.tcl.mmd
+- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/design_2.tcl.mmd
 
 Preview (first diagram):
 
