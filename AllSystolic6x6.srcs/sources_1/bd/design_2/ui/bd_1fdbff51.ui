@@ -3,7 +3,7 @@
    "Default View_ScaleFactor":"0.597574",
    "Default View_TopLeft":"-80,-688",
    "ExpandedHierarchyInLayout":"",
-   "guistr":"# # String gsaved with Nlview 7.7.1 2023-07-26 3bc4126617 VDI=43 GEI=38 GUI=JA:21.0
+   "guistr":"# # String gsaved with Nlview 7.8.0 2024-04-26 e1825d835c VDI=44 GEI=38 GUI=JA:21.0
 #  -string -flagsOSRD
 preplace inst zynq_ultra_ps_e_0 -pg 1 -lvl 2 -x 1080 -y 240 -defaultsOSRD
 preplace inst axis_ann_0 -pg 1 -lvl 2 -x 1080 -y 700 -defaultsOSRD

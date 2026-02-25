@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date             : Thu Dec 19 09:21:05 2024
+| Date             : Mon Dec 23 15:23:00 2024
 | Host             : DESKTOP-HTVV1N1 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_2_wrapper_power_routed.rpt -pb design_2_wrapper_power_summary_routed.pb -rpx design_2_wrapper_power_routed.rpx
 | Design           : design_2_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.782        |
+| Total On-Chip Power (W)  | 2.781        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 2.481        |
+| Dynamic (W)              | 2.480        |
 | Device Static (W)        | 0.301        |
 | Effective TJA (C/W)      | 2.3          |
 | Max Ambient (C)          | 78.5         |
@@ -52,23 +52,23 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.017 |        4 |       --- |             --- |
-| CLB Logic                |     0.020 |    18130 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     5856 |    117120 |            5.00 |
-|   LUT as Distributed RAM |     0.007 |      376 |     57600 |            0.65 |
-|   LUT as Shift Register  |     0.002 |      304 |     57600 |            0.53 |
-|   Register               |     0.001 |     8619 |    234240 |            3.68 |
-|   CARRY8                 |    <0.001 |       98 |     14640 |            0.67 |
-|   Others                 |     0.000 |      799 |       --- |             --- |
+| Clocks                   |     0.016 |        4 |       --- |             --- |
+| CLB Logic                |     0.020 |    18544 |       --- |             --- |
+|   LUT as Logic           |     0.009 |     5981 |    117120 |            5.11 |
+|   LUT as Distributed RAM |     0.006 |      376 |     57600 |            0.65 |
+|   LUT as Shift Register  |     0.002 |      320 |     57600 |            0.56 |
+|   Register               |     0.001 |     8826 |    234240 |            3.77 |
+|   CARRY8                 |    <0.001 |      108 |     14640 |            0.74 |
+|   Others                 |     0.000 |      801 |       --- |             --- |
 |   F7/F8 Muxes            |     0.000 |       90 |    117120 |            0.08 |
-| Signals                  |     0.012 |    13886 |       --- |             --- |
+| Signals                  |     0.012 |    14179 |       --- |             --- |
 | Block RAM                |     0.007 |     19.5 |       144 |           13.54 |
 | DSPs                     |     0.005 |       36 |      1248 |            2.88 |
 | PS8                      |     2.421 |        1 |       --- |             --- |
 | Static Power             |     0.301 |          |           |                 |
 |   PS Static              |     0.000 |          |           |                 |
 |   PL Static              |     0.301 |          |           |                 |
-| Total                    |     2.782 |          |           |                 |
+| Total                    |     2.781 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -78,7 +78,7 @@ Table of Contents
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
 | Source          | Voltage (V) | Total (A) | Dynamic (A) | Static (A) | Powerup (A) | Budget (A)  | Margin (A) |
 +-----------------+-------------+-----------+-------------+------------+-------------+-------------+------------+
-| Vccint          |       0.720 |     0.170 |       0.083 |      0.087 |       NA    | Unspecified | NA         |
+| Vccint          |       0.720 |     0.169 |       0.082 |      0.087 |       NA    | Unspecified | NA         |
 | Vccint_io       |       0.850 |     0.036 |       0.000 |      0.036 |       NA    | Unspecified | NA         |
 | Vccbram         |       0.850 |     0.002 |       0.001 |      0.001 |       NA    | Unspecified | NA         |
 | Vccaux          |       1.800 |     0.075 |       0.000 |      0.075 |       NA    | Unspecified | NA         |
@@ -165,17 +165,17 @@ Table of Contents
 +-----------------------+-----------+
 | Name                  | Power (W) |
 +-----------------------+-----------+
-| design_2_wrapper      |     2.481 |
-|   design_2_i          |     2.481 |
-|     axi_dma_0         |     0.007 |
-|       U0              |     0.007 |
+| design_2_wrapper      |     2.480 |
+|   design_2_i          |     2.480 |
+|     axi_dma_0         |     0.008 |
+|       U0              |     0.008 |
 |     axi_smc           |     0.005 |
 |       inst            |     0.005 |
 |     axi_smc_1         |     0.006 |
 |       inst            |     0.006 |
 |     axis_ann_0        |     0.030 |
 |       inst            |     0.030 |
-|     ps8_0_axi_periph  |     0.011 |
+|     ps8_0_axi_periph  |     0.010 |
 |       s00_couplers    |     0.005 |
 |       s01_couplers    |     0.005 |
 |     zynq_ultra_ps_e_0 |     2.422 |

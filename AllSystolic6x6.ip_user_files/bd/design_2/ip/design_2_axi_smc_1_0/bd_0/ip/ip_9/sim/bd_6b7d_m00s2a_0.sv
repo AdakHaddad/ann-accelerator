@@ -1,5 +1,5 @@
 // (c) Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// (c) Copyright 2022-2024 Advanced Micro Devices, Inc. All rights reserved.
+// (c) Copyright 2022-2026 Advanced Micro Devices, Inc. All rights reserved.
 // 
 // This file contains confidential and proprietary information
 // of AMD and is protected under U.S. and international copyright
@@ -48,7 +48,7 @@
 
 
 // IP VLNV: xilinx.com:ip:sc_sc2axi:1.0
-// IP Revision: 10
+// IP Revision: 11
 
 `timescale 1ns/1ps
 
@@ -93,10 +93,12 @@ module bd_6b7d_m00s2a_0 (
   m_axi_bready
 );
 
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF M_AXI:S_SC_AW:S_SC_AR:S_SC_W:M_SC_R:M_SC_B, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_2_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:clock:1.0 aclk CLK" *)
+(* X_INTERFACE_MODE = "slave" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME aclk, ASSOCIATED_BUSIF M_AXI:S_SC_AW:S_SC_AR:S_SC_W:M_SC_R:M_SC_B, FREQ_HZ 99999001, FREQ_TOLERANCE_HZ 0, PHASE 0.0, CLK_DOMAIN design_2_zynq_ultra_ps_e_0_0_pl_clk0, INSERT_VIP 0" *)
 input wire aclk;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B REQ" *)
+(* X_INTERFACE_MODE = "master" *)
 output wire m_sc_b_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B INFO" *)
 output wire [0 : 0] m_sc_b_info;
@@ -105,8 +107,9 @@ output wire m_sc_b_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B RECV" *)
 input wire m_sc_b_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 M_SC_B PAYLD" *)
-output wire [5 : 0] m_sc_b_payld;
+output wire [4 : 0] m_sc_b_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW REQ" *)
+(* X_INTERFACE_MODE = "slave" *)
 input wire s_sc_aw_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW INFO" *)
 input wire [0 : 0] s_sc_aw_info;
@@ -115,8 +118,9 @@ input wire s_sc_aw_send;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW RECV" *)
 output wire s_sc_aw_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_AW PAYLD" *)
-input wire [139 : 0] s_sc_aw_payld;
+input wire [137 : 0] s_sc_aw_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W REQ" *)
+(* X_INTERFACE_MODE = "slave" *)
 input wire s_sc_w_req;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W INFO" *)
 input wire [0 : 0] s_sc_w_info;
@@ -127,7 +131,10 @@ output wire s_sc_w_recv;
 (* X_INTERFACE_INFO = "xilinx.com:interface:sc:1.0 S_SC_W PAYLD" *)
 input wire [159 : 0] s_sc_w_payld;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWID" *)
-output wire [1 : 0] m_axi_awid;
+(* X_INTERFACE_MODE = "master" *)
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 99999001, ID_WIDTH 1, ADDR_WIDTH 32, AWUSER_WIDTH 1024, ARUSER_WIDTH 0, WUSER_WIDTH 1024, RUSER_WIDTH 0, BUSER_WIDTH 1024, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN design_2_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREAD\
+S 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
+output wire [0 : 0] m_axi_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWADDR" *)
 output wire [31 : 0] m_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI AWLEN" *)
@@ -159,25 +166,23 @@ output wire m_axi_wvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI WREADY" *)
 input wire m_axi_wready;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BID" *)
-input wire [1 : 0] m_axi_bid;
+input wire [0 : 0] m_axi_bid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BRESP" *)
 input wire [1 : 0] m_axi_bresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BUSER" *)
 input wire [1023 : 0] m_axi_buser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BVALID" *)
 input wire m_axi_bvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME M_AXI, DATA_WIDTH 128, PROTOCOL AXI4, FREQ_HZ 99999001, ID_WIDTH 2, ADDR_WIDTH 32, AWUSER_WIDTH 1024, ARUSER_WIDTH 0, WUSER_WIDTH 1024, RUSER_WIDTH 0, BUSER_WIDTH 1024, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 1, HAS_PROT 1, HAS_CACHE 1, HAS_QOS 1, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 0, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN design_2_zynq_ultra_ps_e_0_0_pl_clk0, NUM_READ_THREAD\
-S 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 M_AXI BREADY" *)
 output wire m_axi_bready;
 
-  sc_sc2axi_v1_0_10_top #(
+  sc_sc2axi_v1_0_11_top #(
     .C_AXI_ADDR_WIDTH(32),
-    .C_AXI_ID_WIDTH(2),
+    .C_AXI_ID_WIDTH(1),
     .C_AXI_RDATA_WIDTH(128),
     .C_AXI_WDATA_WIDTH(128),
     .C_SC_ADDR_WIDTH(32),
-    .C_SC_ID_WIDTH(2),
+    .C_SC_ID_WIDTH(1),
     .C_SC_RDATA_WIDTH(128),
     .C_SC_WDATA_WIDTH(128),
     .C_SC_RUSER_BITS_PER_BYTE(0),
@@ -187,11 +192,11 @@ output wire m_axi_bready;
     .C_SC_BUSER_WIDTH(0),
     .C_MSC_ROUTE_WIDTH(1),
     .C_SSC_ROUTE_WIDTH(1),
-    .C_AWPAYLD_WIDTH(140),
-    .C_ARPAYLD_WIDTH(140),
+    .C_AWPAYLD_WIDTH(138),
+    .C_ARPAYLD_WIDTH(138),
     .C_WPAYLD_WIDTH(160),
-    .C_RPAYLD_WIDTH(148),
-    .C_BPAYLD_WIDTH(6)
+    .C_RPAYLD_WIDTH(147),
+    .C_BPAYLD_WIDTH(5)
   ) inst (
     .aclk(aclk),
     .m_sc_r_req(),
@@ -208,7 +213,7 @@ output wire m_axi_bready;
     .s_sc_ar_info(1'D0),
     .s_sc_ar_send(1'D0),
     .s_sc_ar_recv(),
-    .s_sc_ar_payld(140'D0),
+    .s_sc_ar_payld(138'D0),
     .s_sc_aw_req(s_sc_aw_req),
     .s_sc_aw_info(s_sc_aw_info),
     .s_sc_aw_send(s_sc_aw_send),
@@ -250,7 +255,7 @@ output wire m_axi_bready;
     .m_axi_aruser(),
     .m_axi_arvalid(),
     .m_axi_arready(1'H0),
-    .m_axi_rid(2'H0),
+    .m_axi_rid(1'H0),
     .m_axi_rdata(128'H00000000000000000000000000000000),
     .m_axi_rresp(2'H0),
     .m_axi_rlast(1'H1),

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Dec 18 16:45:40 2024" VIVADOVERSION="2024.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Feb 25 22:44:36 2026" VIVADOVERSION="2025.2">
 
   <SYSTEMINFO ARCH="zynquplus" BOARD="xilinx.com:kv260_som:part0:1.4" DEVICE="xck26" NAME="design_2" PACKAGE="sfvc784" SPEEDGRADE="-2LV"/>
 
@@ -8,7 +8,7 @@
   <EXTERNALINTERFACES/>
 
   <MODULES>
-    <MODULE COREREVISION="32" FULLNAME="/axi_dma_0" HWVERSION="7.1" INSTANCE="axi_dma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_dma" VLNV="xilinx.com:ip:axi_dma:7.1">
+    <MODULE COREREVISION="37" FULLNAME="/axi_dma_0" HWVERSION="7.1" INSTANCE="axi_dma_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="axi_dma" VLNV="xilinx.com:ip:axi_dma:7.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_dma;v=v7_1;d=pg021_axi_dma.pdf"/>
       </DOCUMENTS>
@@ -841,7 +841,7 @@
         <PARAMETER NAME="C_INCLUDE_SG" VALUE="0"/>
         <PARAMETER NAME="C_INCREASE_THROUGHPUT" VALUE="0"/>
         <PARAMETER NAME="C_MICRO_DMA" VALUE="0"/>
-        <PARAMETER NAME="C_MM2S_BURST_SIZE" VALUE="4"/>
+        <PARAMETER NAME="C_MM2S_BURST_SIZE" VALUE="16"/>
         <PARAMETER NAME="C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_M_AXIS_MM2S_TDATA_WIDTH" VALUE="128"/>
         <PARAMETER NAME="C_M_AXI_MM2S_ADDR_WIDTH" VALUE="32"/>
@@ -855,7 +855,7 @@
         <PARAMETER NAME="C_PRMRY_IS_ACLK_ASYNC" VALUE="0"/>
         <PARAMETER NAME="C_S2MM_BURST_SIZE" VALUE="16"/>
         <PARAMETER NAME="C_SG_INCLUDE_STSCNTRL_STRM" VALUE="0"/>
-        <PARAMETER NAME="C_SG_LENGTH_WIDTH" VALUE="14"/>
+        <PARAMETER NAME="C_SG_LENGTH_WIDTH" VALUE="26"/>
         <PARAMETER NAME="C_SG_USE_STSAPP_LENGTH" VALUE="0"/>
         <PARAMETER NAME="C_S_AXIS_S2MM_STS_TDATA_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_S_AXIS_S2MM_TDATA_WIDTH" VALUE="128"/>
@@ -877,14 +877,14 @@
         <PARAMETER NAME="c_m_axi_s2mm_data_width" VALUE="128"/>
         <PARAMETER NAME="c_m_axis_mm2s_tdata_width" VALUE="128"/>
         <PARAMETER NAME="c_micro_dma" VALUE="0"/>
-        <PARAMETER NAME="c_mm2s_burst_size" VALUE="4"/>
+        <PARAMETER NAME="c_mm2s_burst_size" VALUE="16"/>
         <PARAMETER NAME="c_num_mm2s_channels" VALUE="1"/>
         <PARAMETER NAME="c_num_s2mm_channels" VALUE="1"/>
         <PARAMETER NAME="c_prmry_is_aclk_async" VALUE="0"/>
         <PARAMETER NAME="c_s2mm_burst_size" VALUE="16"/>
         <PARAMETER NAME="c_s_axis_s2mm_tdata_width" VALUE="128"/>
         <PARAMETER NAME="c_sg_include_stscntrl_strm" VALUE="0"/>
-        <PARAMETER NAME="c_sg_length_width" VALUE="14"/>
+        <PARAMETER NAME="c_sg_length_width" VALUE="26"/>
         <PARAMETER NAME="c_sg_use_stsapp_length" VALUE="0"/>
         <PARAMETER NAME="c_single_interface" VALUE="0"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
@@ -1203,9 +1203,9 @@
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="1"/>
-          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="1"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
-          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
+          <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_THREADS" VALUE="1"/>
           <PARAMETER NAME="PHASE" VALUE="0.0"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4LITE"/>
@@ -1253,7 +1253,7 @@
           <PARAMETER NAME="HAS_WSTRB" VALUE="0"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="4"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
@@ -1336,7 +1336,6 @@
         <BUSINTERFACE BUSNAME="axi_dma_0_M_AXIS_MM2S" NAME="M_AXIS_MM2S" TYPE="INITIATOR" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_2_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
-          <PARAMETER NAME="HAS_BURST" VALUE="0"/>
           <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
@@ -1358,7 +1357,7 @@
         <BUSINTERFACE BUSNAME="axis_ann_0_m_axis" NAME="S_AXIS_S2MM" TYPE="TARGET" VLNV="xilinx.com:interface:axis:1.0">
           <PARAMETER NAME="CLK_DOMAIN" VALUE="design_2_zynq_ultra_ps_e_0_0_pl_clk0"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="99999001"/>
-          <PARAMETER NAME="HAS_TKEEP" VALUE="1"/>
+          <PARAMETER NAME="HAS_TKEEP" VALUE="0"/>
           <PARAMETER NAME="HAS_TLAST" VALUE="1"/>
           <PARAMETER NAME="HAS_TREADY" VALUE="1"/>
           <PARAMETER NAME="HAS_TSTRB" VALUE="0"/>
@@ -1388,7 +1387,7 @@
         <PERIPHERAL INSTANCE="axis_ann_0"/>
       </PERIPHERALS>
     </MODULE>
-    <MODULE BD="design_2_axi_smc_0" BDTYPE="SBD" COREREVISION="23" DRIVERMODE="CORE" FULLNAME="/axi_smc" HWVERSION="1.0" INSTANCE="axi_smc" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_2_axi_smc_0" VLNV="xilinx.com:ip:smartconnect:1.0">
+    <MODULE BD="design_2_axi_smc_0" BDTYPE="SBD" COREREVISION="28" DRIVERMODE="CORE" FULLNAME="/axi_smc" HWVERSION="1.0" INSTANCE="axi_smc" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_2_axi_smc_0" VLNV="xilinx.com:ip:smartconnect:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
@@ -1401,6 +1400,7 @@
         <PARAMETER NAME="NUM_CLKS" VALUE="1"/>
         <PARAMETER NAME="NUM_MI" VALUE="1"/>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
+        <PARAMETER NAME="STRATEGY" VALUE="AUTOMATIC"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -1575,7 +1575,7 @@
           <PARAMETER NAME="HAS_WSTRB" VALUE="0"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="4"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
@@ -1623,7 +1623,7 @@
           <PARAMETER NAME="HAS_WSTRB" VALUE="0"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="4"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="2"/>
@@ -1656,7 +1656,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE BD="design_2_axi_smc_1_0" BDTYPE="SBD" COREREVISION="23" DRIVERMODE="CORE" FULLNAME="/axi_smc_1" HWVERSION="1.0" INSTANCE="axi_smc_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_2_axi_smc_1_0" VLNV="xilinx.com:ip:smartconnect:1.0">
+    <MODULE BD="design_2_axi_smc_1_0" BDTYPE="SBD" COREREVISION="28" DRIVERMODE="CORE" FULLNAME="/axi_smc_1" HWVERSION="1.0" INSTANCE="axi_smc_1" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="smartconnect" SIM_BD="design_2_axi_smc_1_0" VLNV="xilinx.com:ip:smartconnect:1.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=smartconnect;v=v1_0;d=pg247-smartconnect.pdf"/>
       </DOCUMENTS>
@@ -1669,6 +1669,7 @@
         <PARAMETER NAME="NUM_CLKS" VALUE="1"/>
         <PARAMETER NAME="NUM_MI" VALUE="1"/>
         <PARAMETER NAME="NUM_SI" VALUE="1"/>
+        <PARAMETER NAME="STRATEGY" VALUE="AUTOMATIC"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="BUS"/>
       </PARAMETERS>
       <PORTS>
@@ -2063,7 +2064,7 @@
         </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="32" FULLNAME="/ps8_0_axi_periph" HWVERSION="2.1" INSTANCE="ps8_0_axi_periph" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
+    <MODULE COREREVISION="38" FULLNAME="/ps8_0_axi_periph" HWVERSION="2.1" INSTANCE="ps8_0_axi_periph" IPTYPE="BUS" IS_ENABLE="1" MODCLASS="BUS" MODTYPE="axi_interconnect" VLNV="xilinx.com:ip:axi_interconnect:2.1">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=axi_interconnect;v=v2_1;d=pg059-axi-interconnect.pdf"/>
       </DOCUMENTS>
@@ -2919,26 +2920,6 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="S00_AXI_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
-        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
-          <PORTMAPS>
-            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
-            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
-            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M00_AXI_arvalid"/>
-            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M00_AXI_awaddr"/>
-            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M00_AXI_awready"/>
-            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M00_AXI_awvalid"/>
-            <PORTMAP LOGICAL="BREADY" PHYSICAL="M00_AXI_bready"/>
-            <PORTMAP LOGICAL="BRESP" PHYSICAL="M00_AXI_bresp"/>
-            <PORTMAP LOGICAL="BVALID" PHYSICAL="M00_AXI_bvalid"/>
-            <PORTMAP LOGICAL="RDATA" PHYSICAL="M00_AXI_rdata"/>
-            <PORTMAP LOGICAL="RREADY" PHYSICAL="M00_AXI_rready"/>
-            <PORTMAP LOGICAL="RRESP" PHYSICAL="M00_AXI_rresp"/>
-            <PORTMAP LOGICAL="RVALID" PHYSICAL="M00_AXI_rvalid"/>
-            <PORTMAP LOGICAL="WDATA" PHYSICAL="M00_AXI_wdata"/>
-            <PORTMAP LOGICAL="WREADY" PHYSICAL="M00_AXI_wready"/>
-            <PORTMAP LOGICAL="WVALID" PHYSICAL="M00_AXI_wvalid"/>
-          </PORTMAPS>
-        </BUSINTERFACE>
         <BUSINTERFACE BUSNAME="zynq_ultra_ps_e_0_M_AXI_HPM1_FPD" DATAWIDTH="128" NAME="S01_AXI" TYPE="SLAVE" VLNV="xilinx.com:interface:aximm:1.0">
           <PORTMAPS>
             <PORTMAP LOGICAL="ARADDR" PHYSICAL="S01_AXI_araddr"/>
@@ -2980,9 +2961,29 @@
             <PORTMAP LOGICAL="WVALID" PHYSICAL="S01_AXI_wvalid"/>
           </PORTMAPS>
         </BUSINTERFACE>
+        <BUSINTERFACE BUSNAME="ps8_0_axi_periph_M00_AXI" DATAWIDTH="32" NAME="M00_AXI" TYPE="MASTER" VLNV="xilinx.com:interface:aximm:1.0">
+          <PORTMAPS>
+            <PORTMAP LOGICAL="ARADDR" PHYSICAL="M00_AXI_araddr"/>
+            <PORTMAP LOGICAL="ARREADY" PHYSICAL="M00_AXI_arready"/>
+            <PORTMAP LOGICAL="ARVALID" PHYSICAL="M00_AXI_arvalid"/>
+            <PORTMAP LOGICAL="AWADDR" PHYSICAL="M00_AXI_awaddr"/>
+            <PORTMAP LOGICAL="AWREADY" PHYSICAL="M00_AXI_awready"/>
+            <PORTMAP LOGICAL="AWVALID" PHYSICAL="M00_AXI_awvalid"/>
+            <PORTMAP LOGICAL="BREADY" PHYSICAL="M00_AXI_bready"/>
+            <PORTMAP LOGICAL="BRESP" PHYSICAL="M00_AXI_bresp"/>
+            <PORTMAP LOGICAL="BVALID" PHYSICAL="M00_AXI_bvalid"/>
+            <PORTMAP LOGICAL="RDATA" PHYSICAL="M00_AXI_rdata"/>
+            <PORTMAP LOGICAL="RREADY" PHYSICAL="M00_AXI_rready"/>
+            <PORTMAP LOGICAL="RRESP" PHYSICAL="M00_AXI_rresp"/>
+            <PORTMAP LOGICAL="RVALID" PHYSICAL="M00_AXI_rvalid"/>
+            <PORTMAP LOGICAL="WDATA" PHYSICAL="M00_AXI_wdata"/>
+            <PORTMAP LOGICAL="WREADY" PHYSICAL="M00_AXI_wready"/>
+            <PORTMAP LOGICAL="WVALID" PHYSICAL="M00_AXI_wvalid"/>
+          </PORTMAPS>
+        </BUSINTERFACE>
       </BUSINTERFACES>
     </MODULE>
-    <MODULE COREREVISION="15" FULLNAME="/rst_ps8_0_99M" HWVERSION="5.0" INSTANCE="rst_ps8_0_99M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
+    <MODULE COREREVISION="17" FULLNAME="/rst_ps8_0_99M" HWVERSION="5.0" INSTANCE="rst_ps8_0_99M" IPTYPE="PERIPHERAL" IS_ENABLE="1" MODCLASS="PERIPHERAL" MODTYPE="proc_sys_reset" VLNV="xilinx.com:ip:proc_sys_reset:5.0">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=proc_sys_reset;v=v5_0;d=pg164-proc-sys-reset.pdf"/>
       </DOCUMENTS>
@@ -3015,13 +3016,13 @@
         <PORT DIR="O" NAME="mb_reset" POLARITY="ACTIVE_HIGH" SIGIS="rst"/>
         <PORT DIR="O" LEFT="0" NAME="peripheral_aresetn" POLARITY="ACTIVE_LOW" RIGHT="0" SIGIS="rst" SIGNAME="rst_ps8_0_99M_peripheral_aresetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S00_ARESETN"/>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="axi_resetn"/>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M00_ARESETN"/>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="ARESETN"/>
             <CONNECTION INSTANCE="axis_ann_0" PORT="aresetn"/>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="axi_resetn"/>
             <CONNECTION INSTANCE="axi_smc" PORT="aresetn"/>
             <CONNECTION INSTANCE="axi_smc_1" PORT="aresetn"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="ARESETN"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S00_ARESETN"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M00_ARESETN"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S01_ARESETN"/>
           </CONNECTIONS>
         </PORT>
@@ -3034,15 +3035,15 @@
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
-    <MODULE CONFIGURABLE="TRUE" COREREVISION="3" FULLNAME="/zynq_ultra_ps_e_0" HWVERSION="3.5" INSTANCE="zynq_ultra_ps_e_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" IS_PL="FALSE" MODTYPE="zynq_ultra_ps_e" VLNV="xilinx.com:ip:zynq_ultra_ps_e:3.5">
+    <MODULE CONFIGURABLE="TRUE" COREREVISION="8" FULLNAME="/zynq_ultra_ps_e_0" HWVERSION="3.5" INSTANCE="zynq_ultra_ps_e_0" IPTYPE="PERIPHERAL" IS_ENABLE="1" IS_PL="FALSE" MODTYPE="zynq_ultra_ps_e" VLNV="xilinx.com:ip:zynq_ultra_ps_e:3.5">
       <DOCUMENTS>
         <DOCUMENT SOURCE="http://www.xilinx.com/cgi-bin/docs/ipdoc?c=zynq_ultra_ps_e;v=v3_5;d=pg201-zynq-ultrascale-plus-processing-system.pdf"/>
       </DOCUMENTS>
       <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_DDR_HIGH" RANGE="0x800000000" USAGE="memory"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
-        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_DDR_HIGH" RANGE="0x800000000" USAGE="memory"/>
+        <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_LPS_OCM" RANGE="0x1000000" USAGE="register"/>
       </ADDRESSBLOCKS>
       <ADDRESSBLOCKS>
         <ADDRESSBLOCK ACCESS="" INTERFACE="SAXIGP2" NAME="HP0_DDR_LOW" RANGE="0x80000000" USAGE="memory"/>
@@ -3664,9 +3665,9 @@
         <PARAMETER NAME="PSU__CRF_APB__DBG_FPD_CTRL__DIVISOR0" VALUE="2"/>
         <PARAMETER NAME="PSU__CRF_APB__DBG_FPD_CTRL__FREQMHZ" VALUE="250"/>
         <PARAMETER NAME="PSU__CRF_APB__DBG_FPD_CTRL__SRCSEL" VALUE="IOPLL"/>
-        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__ACT_FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__ACT_FREQMHZ" VALUE="125"/>
         <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__DIVISOR0" VALUE="5"/>
-        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__FREQMHZ" VALUE="250"/>
+        <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__FREQMHZ" VALUE="125"/>
         <PARAMETER NAME="PSU__CRF_APB__DBG_TRACE_CTRL__SRCSEL" VALUE="IOPLL"/>
         <PARAMETER NAME="PSU__CRF_APB__DBG_TSTMP_CTRL__ACT_FREQMHZ" VALUE="249.997498"/>
         <PARAMETER NAME="PSU__CRF_APB__DBG_TSTMP_CTRL__DIVISOR0" VALUE="2"/>
@@ -4311,6 +4312,8 @@
         <PARAMETER NAME="PSU__IRQ_P2F_TTC3__INT2" VALUE="0"/>
         <PARAMETER NAME="PSU__IRQ_P2F_UART0__INT" VALUE="0"/>
         <PARAMETER NAME="PSU__IRQ_P2F_UART1__INT" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_USB2_OTG__INT0" VALUE="0"/>
+        <PARAMETER NAME="PSU__IRQ_P2F_USB2_OTG__INT1" VALUE="0"/>
         <PARAMETER NAME="PSU__IRQ_P2F_USB3_ENDPOINT__INT0" VALUE="0"/>
         <PARAMETER NAME="PSU__IRQ_P2F_USB3_ENDPOINT__INT1" VALUE="0"/>
         <PARAMETER NAME="PSU__IRQ_P2F_USB3_OTG__INT0" VALUE="0"/>
@@ -4525,7 +4528,7 @@
         <PARAMETER NAME="PSU__PROTECTION__DDR_SEGMENTS" VALUE="NONE"/>
         <PARAMETER NAME="PSU__PROTECTION__DEBUG" VALUE="0"/>
         <PARAMETER NAME="PSU__PROTECTION__ENABLE" VALUE="0"/>
-        <PARAMETER NAME="PSU__PROTECTION__FPD_SEGMENTS" VALUE="SA:0xFD1A0000; SIZE:1280; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD000000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD010000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD020000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD030000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD040000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD050000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD610000; SIZE:512; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFD5D0000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware|SA:0xFD1A0000 ; SIZE:1280; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem"/>
+        <PARAMETER NAME="PSU__PROTECTION__FPD_SEGMENTS" VALUE="SA:0xFD1A0000; SIZE:1280; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD000000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD010000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD020000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD030000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD040000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD050000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD610000; SIZE:512; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware |  SA:0xFD5D0000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware | SA:0xFD1A0000 ; SIZE:1280; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem"/>
         <PARAMETER NAME="PSU__PROTECTION__LOCK_UNUSED_SEGMENTS" VALUE="0"/>
         <PARAMETER NAME="PSU__PROTECTION__LPD_SEGMENTS" VALUE="SA:0xFF980000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF5E0000; SIZE:2560; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFFCC0000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF180000; SIZE:768; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF410000; SIZE:640; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFFA70000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware| SA:0xFF9A0000; SIZE:64; UNIT:KB; RegionTZ:Secure; WrAllowed:Read/Write; subsystemId:PMU Firmware|SA:0xFF5E0000 ; SIZE:2560; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem|SA:0xFFCC0000 ; SIZE:64; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem|SA:0xFF180000 ; SIZE:768; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem|SA:0xFF9A0000 ; SIZE:64; UNIT:KB; RegionTZ:Secure ; WrAllowed:Read/Write; subsystemId:Secure Subsystem"/>
         <PARAMETER NAME="PSU__PROTECTION__MASTERS" VALUE="USB1:NonSecure;0|USB0:NonSecure;0|S_AXI_LPD:NA;0|S_AXI_HPC1_FPD:NA;0|S_AXI_HPC0_FPD:NA;0|S_AXI_HP3_FPD:NA;0|S_AXI_HP2_FPD:NA;1|S_AXI_HP1_FPD:NA;0|S_AXI_HP0_FPD:NA;1|S_AXI_ACP:NA;0|S_AXI_ACE:NA;0|SD1:NonSecure;0|SD0:NonSecure;0|SATA1:NonSecure;0|SATA0:NonSecure;0|RPU1:Secure;1|RPU0:Secure;1|QSPI:NonSecure;1|PMU:NA;1|PCIe:NonSecure;0|NAND:NonSecure;0|LDMA:NonSecure;1|GPU:NonSecure;1|GEM3:NonSecure;0|GEM2:NonSecure;0|GEM1:NonSecure;0|GEM0:NonSecure;0|FDMA:NonSecure;1|DP:NonSecure;0|DAP:NA;1|Coresight:NA;1|CSU:NA;1|APU:NA;1"/>
@@ -5165,21 +5168,21 @@
         </PORT>
         <PORT CLKFREQUENCY="99999001" DIR="O" NAME="pl_clk0" SIGIS="clk" SIGNAME="zynq_ultra_ps_e_0_pl_clk0">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S00_ACLK"/>
-            <CONNECTION INSTANCE="rst_ps8_0_99M" PORT="slowest_sync_clk"/>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_aclk"/>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M00_ACLK"/>
-            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="ACLK"/>
             <CONNECTION INSTANCE="axis_ann_0" PORT="aclk"/>
-            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_s2mm_aclk"/>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="s_axi_lite_aclk"/>
             <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_mm2s_aclk"/>
+            <CONNECTION INSTANCE="axi_dma_0" PORT="m_axi_s2mm_aclk"/>
             <CONNECTION INSTANCE="axi_smc" PORT="aclk"/>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp0_fpd_aclk"/>
             <CONNECTION INSTANCE="axi_smc_1" PORT="aclk"/>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp2_fpd_aclk"/>
-            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm1_fpd_aclk"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="ACLK"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S00_ACLK"/>
+            <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="M00_ACLK"/>
             <CONNECTION INSTANCE="ps8_0_axi_periph" PORT="S01_ACLK"/>
+            <CONNECTION INSTANCE="rst_ps8_0_99M" PORT="slowest_sync_clk"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm0_fpd_aclk"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="maxihpm1_fpd_aclk"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp0_fpd_aclk"/>
+            <CONNECTION INSTANCE="zynq_ultra_ps_e_0" PORT="saxihp2_fpd_aclk"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="99999001" DIR="O" NAME="pl_clk1" SIGIS="clk"/>
@@ -5529,7 +5532,7 @@
           <PARAMETER NAME="HAS_WSTRB" VALUE="1"/>
           <PARAMETER NAME="ID_WIDTH" VALUE="6"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
-          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="4"/>
+          <PARAMETER NAME="MAX_BURST_LENGTH" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="16"/>
           <PARAMETER NAME="NUM_READ_THREADS" VALUE="1"/>
           <PARAMETER NAME="NUM_WRITE_OUTSTANDING" VALUE="16"/>

@@ -1,7 +1,7 @@
 Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2024.1 (win64) Build 5076996 Wed May 22 18:37:14 MDT 2024
-| Date         : Thu Dec 19 09:08:01 2024
+| Date         : Mon Dec 23 15:13:11 2024
 | Host         : DESKTOP-HTVV1N1 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_2_wrapper_utilization_synth.rpt -pb design_2_wrapper_utilization_synth.pb
 | Design       : design_2_wrapper
@@ -32,15 +32,15 @@ Table of Contents
 +----------------------------+------+-------+------------+-----------+-------+
 |          Site Type         | Used | Fixed | Prohibited | Available | Util% |
 +----------------------------+------+-------+------------+-----------+-------+
-| CLB LUTs*                  | 7166 |     0 |          0 |    117120 |  6.12 |
-|   LUT as Logic             | 6378 |     0 |          0 |    117120 |  5.45 |
-|   LUT as Memory            |  788 |     0 |          0 |     57600 |  1.37 |
+| CLB LUTs*                  | 7318 |     0 |          0 |    117120 |  6.25 |
+|   LUT as Logic             | 6502 |     0 |          0 |    117120 |  5.55 |
+|   LUT as Memory            |  816 |     0 |          0 |     57600 |  1.42 |
 |     LUT as Distributed RAM |  376 |     0 |            |           |       |
-|     LUT as Shift Register  |  412 |     0 |            |           |       |
-| CLB Registers              | 8770 |     0 |          0 |    234240 |  3.74 |
-|   Register as Flip Flop    | 8770 |     0 |          0 |    234240 |  3.74 |
+|     LUT as Shift Register  |  440 |     0 |            |           |       |
+| CLB Registers              | 8969 |     0 |          0 |    234240 |  3.83 |
+|   Register as Flip Flop    | 8969 |     0 |          0 |    234240 |  3.83 |
 |   Register as Latch        |    0 |     0 |          0 |    234240 |  0.00 |
-| CARRY8                     |  100 |     0 |          0 |     14640 |  0.68 |
+| CARRY8                     |  110 |     0 |          0 |     14640 |  0.75 |
 | F7 Muxes                   |   60 |     0 |          0 |     58560 |  0.10 |
 | F8 Muxes                   |   30 |     0 |          0 |     29280 |  0.10 |
 | F9 Muxes                   |    0 |     0 |          0 |     14640 |  0.00 |
@@ -65,7 +65,7 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 | 66    |          Yes |           - |          Set |
 | 1880  |          Yes |           - |        Reset |
 | 195   |          Yes |         Set |            - |
-| 6629  |          Yes |       Reset |            - |
+| 6828  |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -162,18 +162,18 @@ Warning! For any ECO changes, please run place_design if there are unplaced inst
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     | 6629 |            Register |
-| LUT3     | 1964 |                 CLB |
+| FDRE     | 6828 |            Register |
+| LUT3     | 2056 |                 CLB |
 | FDCE     | 1880 |            Register |
-| LUT6     | 1862 |                 CLB |
-| LUT2     | 1382 |                 CLB |
-| LUT5     | 1194 |                 CLB |
-| LUT4     |  876 |                 CLB |
+| LUT6     | 1845 |                 CLB |
+| LUT2     | 1405 |                 CLB |
+| LUT5     | 1216 |                 CLB |
+| LUT4     |  916 |                 CLB |
 | RAMD32   |  650 |                 CLB |
-| LUT1     |  507 |                 CLB |
-| SRL16E   |  342 |                 CLB |
+| LUT1     |  506 |                 CLB |
+| SRL16E   |  370 |                 CLB |
 | FDSE     |  195 |            Register |
-| CARRY8   |  100 |                 CLB |
+| CARRY8   |  110 |                 CLB |
 | RAMS32   |   94 |                 CLB |
 | SRLC32E  |   70 |                 CLB |
 | FDPE     |   66 |            Register |

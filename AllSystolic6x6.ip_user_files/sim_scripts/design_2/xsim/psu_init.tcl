@@ -388,6 +388,7 @@ set psu_pll_init_data {
 		# PLL Basic Control
 		#(OFFSET, MASK, VALUE)      (0XFD1A002C, 0x00000008U ,0x00000008U)  */
     mask_write 0XFD1A002C 0x00000008 0x00000008
+		# : DPLL FRAC CFG
 		# : ASSERT RESET
 		# Register : DPLL_CTRL @ 0XFD1A002C</p>
 
@@ -435,7 +436,6 @@ set psu_pll_init_data {
     # PD as a clock source for the peripheral clock muxes.
 		#(OFFSET, MASK, VALUE)      (0XFD1A004C, 0x00003F00U ,0x00000200U)  */
     mask_write 0XFD1A004C 0x00003F00 0x00000200
-		# : DPLL FRAC CFG
 		# : VIDEO_PLL INIT
 		# Register : VPLL_CFG @ 0XFD1A003C</p>
 

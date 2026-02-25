@@ -56,11 +56,6 @@ if {$::dispatch::connected} {
 }
 
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 1
-set_param power.BramSDPPropagationFix 1
-set_param power.enableUnconnectedCarry8PinPower 1
-set_param power.enableCarry8RouteBelPower 1
-set_param power.enableLutRouteBelPower 1
 set_msg_config -id {HDL 9-1061} -limit 100000
 set_msg_config -id {HDL 9-1654} -limit 100000
 set_msg_config  -id {17-179}  -suppress 
@@ -95,14 +90,6 @@ set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vi
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_zynq_ultra_ps_e_0_0/design_2_zynq_ultra_ps_e_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0_clocks.xdc]
-set_property used_in_synthesis false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0_ooc.xdc]
-set_property used_in_synthesis false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_clocks.xdc]
-set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_ooc.xdc]
-set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_rst_ps8_0_99M_1/design_2_rst_ps8_0_99M_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_rst_ps8_0_99M_1/design_2_rst_ps8_0_99M_1.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_smc_0/bd_0/ip/ip_1/bd_ebcc_psr_aclk_0_board.xdc]
@@ -127,6 +114,14 @@ set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vi
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_smc_1_0/bd_0/ip/ip_9/bd_6b7d_m00s2a_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_smc_1_0/ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_smc_1_0/smartconnect.xdc]
+set_property used_in_synthesis false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0_ooc.xdc]
+set_property used_in_synthesis false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_clocks.xdc]
+set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1_ooc.xdc]
 set_property used_in_implementation false [get_files -all c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/design_2_ooc.xdc]
 
 OPTRACE "Adding files" END { }

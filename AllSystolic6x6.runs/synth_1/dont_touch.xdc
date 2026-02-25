@@ -16,18 +16,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_ax
 # IP: bd/design_2/ip/design_2_xbar_0/design_2_xbar_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_xbar_0 || ORIG_REF_NAME==design_2_xbar_0} -quiet] -quiet
 
-# IP: bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_ds_0 || ORIG_REF_NAME==design_2_auto_ds_0} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_pc_0 || ORIG_REF_NAME==design_2_auto_pc_0} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_ds_1 || ORIG_REF_NAME==design_2_auto_ds_1} -quiet] -quiet
-
-# IP: bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_pc_1 || ORIG_REF_NAME==design_2_auto_pc_1} -quiet] -quiet
-
 # IP: bd/design_2/ip/design_2_ps8_0_axi_periph_1/design_2_ps8_0_axi_periph_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_ps8_0_axi_periph_1 || ORIG_REF_NAME==design_2_ps8_0_axi_periph_1} -quiet] -quiet
 
@@ -109,6 +97,18 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_ax
 # IP: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_smc_1_0/bd_0/ip/ip_10/bd_6b7d_m00e_0.xci
 # DONT_TOUCH constraint suppressed by (parent) sub-design file.
 
+# IP: bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_ds_0 || ORIG_REF_NAME==design_2_auto_ds_0} -quiet] -quiet
+
+# IP: bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_pc_0 || ORIG_REF_NAME==design_2_auto_pc_0} -quiet] -quiet
+
+# IP: bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_ds_1 || ORIG_REF_NAME==design_2_auto_ds_1} -quiet] -quiet
+
+# IP: bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_2_auto_pc_1 || ORIG_REF_NAME==design_2_auto_pc_1} -quiet] -quiet
+
 # XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_zynq_ultra_ps_e_0_0/design_2_zynq_ultra_ps_e_0_0_ooc.xdc
 
 # XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_zynq_ultra_ps_e_0_0/design_2_zynq_ultra_ps_e_0_0.xdc
@@ -119,20 +119,6 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0_clocks.xdc
 #dup# set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_axi_dma_0_0 || ORIG_REF_NAME==design_2_axi_dma_0_0} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
-
-# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_clocks.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_auto_ds_0 || ORIG_REF_NAME==design_2_auto_ds_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_ooc.xdc
-
-# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0_ooc.xdc
-
-# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_clocks.xdc
-set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_auto_ds_1 || ORIG_REF_NAME==design_2_auto_ds_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
-
-# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_ooc.xdc
-
-# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1_ooc.xdc
 
 # XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_rst_ps8_0_99M_1/design_2_rst_ps8_0_99M_1_board.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_rst_ps8_0_99M_1 || ORIG_REF_NAME==design_2_rst_ps8_0_99M_1} -quiet] {/U0 } ]/U0 ] -quiet] -quiet
@@ -194,5 +180,19 @@ set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filte
 
 # XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_smc_1_0/smartconnect.xdc
 set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_axi_smc_1_0 || ORIG_REF_NAME==design_2_axi_smc_1_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_clocks.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_auto_ds_0 || ORIG_REF_NAME==design_2_auto_ds_0} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_0/design_2_auto_ds_0_ooc.xdc
+
+# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_0/design_2_auto_pc_0_ooc.xdc
+
+# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_clocks.xdc
+set_property KEEP_HIERARCHY SOFT [get_cells [split [join [get_cells -hier -filter {REF_NAME==design_2_auto_ds_1 || ORIG_REF_NAME==design_2_auto_ds_1} -quiet] {/inst } ]/inst ] -quiet] -quiet
+
+# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_ds_1/design_2_auto_ds_1_ooc.xdc
+
+# XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_auto_pc_1/design_2_auto_pc_1_ooc.xdc
 
 # XDC: c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/design_2_ooc.xdc

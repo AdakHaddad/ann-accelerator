@@ -8,17 +8,17 @@
   **** SW Build 5076996 on Wed May 22 18:37:14 MDT 2024
   **** IP Build 5075265 on Wed May 22 21:45:21 MDT 2024
   **** SharedData Build 5076995 on Wed May 22 18:29:18 MDT 2024
-  **** Start of session at: Thu Dec 19 09:00:53 2024
+  **** Start of session at: Mon Dec 23 15:06:49 2024
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
     ** Copyright 2022-2024 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source design_2_wrapper.tcl -notrace
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-create_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 488.090 ; gain = 201.082
+create_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 488.734 ; gain = 201.441
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2024.1/data/ip'.
-add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 551.914 ; gain = 63.824
+add_files: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 549.633 ; gain = 60.898
 Command: read_checkpoint -auto_incremental -incremental C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.srcs/utils_1/imports/synth_1/design_2_wrapper.dcp
 INFO: [Vivado 12-5825] Read reference checkpoint from C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.srcs/utils_1/imports/synth_1/design_2_wrapper.dcp for incremental synthesis
 INFO: [Vivado 12-7989] Please ensure there are no constraint changes
@@ -27,12 +27,14 @@ Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xck26'
 INFO: [Device 21-403] Loading part xck26-sfvc784-2LV-c
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
 WARNING: [Common 17-1361] You have specified a new message control rule that is equivalent to an existing rule with attributes ' -id {17-179}  -suppress '. The existing rule will be replaced.
-INFO: [Synth 8-7075] Helper process launched with PID 908
+INFO: [Synth 8-7075] Helper process launched with PID 21428
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1955.562 ; gain = 396.141
+Starting RTL Elaboration : Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 1958.898 ; gain = 399.297
 ---------------------------------------------------------------------------------
 WARNING: [Synth 8-9448] extra semicolon in $unit (global) scope [C:/altera/13.1/MSIB/vivado/6x6/6x6.srcs/sources_1/new/systolic2x2.v:1]
 INFO: [Synth 8-11241] undeclared symbol 'dp_audi_ref_clk', assumed default net type 'wire' [c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_zynq_ultra_ps_e_0_0/hdl/zynq_ultra_ps_e_v3_5_3.v:2470]
@@ -49,7 +51,7 @@ INFO: [Synth 8-638] synthesizing module 'design_2_axi_dma_0_0' [c:/altera/13.1/M
 	Parameter C_INCLUDE_SG bound to: 0 - type: integer 
 	Parameter C_SG_INCLUDE_STSCNTRL_STRM bound to: 0 - type: integer 
 	Parameter C_SG_USE_STSAPP_LENGTH bound to: 0 - type: integer 
-	Parameter C_SG_LENGTH_WIDTH bound to: 14 - type: integer 
+	Parameter C_SG_LENGTH_WIDTH bound to: 26 - type: integer 
 	Parameter C_M_AXI_SG_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_SG_DATA_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXIS_MM2S_CNTRL_TDATA_WIDTH bound to: 32 - type: integer 
@@ -57,7 +59,7 @@ INFO: [Synth 8-638] synthesizing module 'design_2_axi_dma_0_0' [c:/altera/13.1/M
 	Parameter C_MICRO_DMA bound to: 0 - type: integer 
 	Parameter C_INCLUDE_MM2S bound to: 1 - type: integer 
 	Parameter C_INCLUDE_MM2S_SF bound to: 1 - type: integer 
-	Parameter C_MM2S_BURST_SIZE bound to: 4 - type: integer 
+	Parameter C_MM2S_BURST_SIZE bound to: 16 - type: integer 
 	Parameter C_M_AXI_MM2S_ADDR_WIDTH bound to: 32 - type: integer 
 	Parameter C_M_AXI_MM2S_DATA_WIDTH bound to: 128 - type: integer 
 	Parameter C_M_AXIS_MM2S_TDATA_WIDTH bound to: 128 - type: integer 
@@ -1023,18 +1025,18 @@ WARNING: [Synth 8-7129] Port test_adc2_in[8] in module zynq_ultra_ps_e_v3_5_3_zy
 WARNING: [Synth 8-7129] Port test_adc2_in[7] in module zynq_ultra_ps_e_v3_5_3_zynq_ultra_ps_e is either unconnected or has no load
 INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:51 ; elapsed = 00:00:54 . Memory (MB): peak = 2494.910 ; gain = 935.488
+Finished RTL Elaboration : Time (s): cpu = 00:00:49 ; elapsed = 00:00:54 . Memory (MB): peak = 2497.770 ; gain = 938.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2494.910 ; gain = 935.488
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 2497.770 ; gain = 938.168
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:52 ; elapsed = 00:00:55 . Memory (MB): peak = 2494.910 ; gain = 935.488
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:50 ; elapsed = 00:00:55 . Memory (MB): peak = 2497.770 ; gain = 938.168
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2515.184 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 2497.770 ; gain = 0.000
 INFO: [Netlist 29-17] Analyzing 51 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
@@ -1042,7 +1044,7 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 Processing XDC Constraints
 Initializing timing engine
 Parsing XDC File [c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_zynq_ultra_ps_e_0_0/design_2_zynq_ultra_ps_e_0_0.xdc] for cell 'design_2_i/zynq_ultra_ps_e_0/inst'
-create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2769.270 ; gain = 29.059
+create_clock: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 2768.508 ; gain = 54.277
 Finished Parsing XDC File [c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_zynq_ultra_ps_e_0_0/design_2_zynq_ultra_ps_e_0_0.xdc] for cell 'design_2_i/zynq_ultra_ps_e_0/inst'
 Parsing XDC File [c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0.xdc] for cell 'design_2_i/axi_dma_0/U0'
 Finished Parsing XDC File [c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_axi_dma_0_0/design_2_axi_dma_0_0.xdc] for cell 'design_2_i/axi_dma_0/U0'
@@ -1111,15 +1113,17 @@ Resolution: To avoid this warning, move constraints listed in [.Xil/design_2_wra
 INFO: [Project 1-1714] 40 XPM XDC files have been applied to the design.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 2778.805 ; gain = 0.207
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 2781.840 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 51 instances were transformed.
   FDR => FDRE: 48 instances
   SRL16 => SRL16E: 3 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.492 . Memory (MB): peak = 2780.621 ; gain = 1.480
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.469 . Memory (MB): peak = 2782.258 ; gain = 0.418
+INFO: [Designutils 20-5440] No compile time benefit to using incremental synthesis; A full resynthesis will be run
+INFO: [Designutils 20-4379] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:59 ; elapsed = 00:02:01 . Memory (MB): peak = 2780.621 ; gain = 1221.199
+Finished Constraint Validation : Time (s): cpu = 00:01:54 ; elapsed = 00:01:59 . Memory (MB): peak = 2782.258 ; gain = 1222.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
@@ -1127,7 +1131,7 @@ Start Loading Part and Timing Information
 Loading part: xck26-sfvc784-2LV-c
 INFO: [Synth 8-6742] Reading net delay rules and data
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:59 ; elapsed = 00:02:01 . Memory (MB): peak = 2780.621 ; gain = 1221.199
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:54 ; elapsed = 00:01:59 . Memory (MB): peak = 2782.258 ; gain = 1222.656
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -1135,11 +1139,11 @@ Start Applying 'set_property' XDC Constraints
 Applied set_property DONT_TOUCH = true for design_2_i/zynq_ultra_ps_e_0/inst/PS8_i. (constraint file  c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ip/design_2_zynq_ultra_ps_e_0_0/design_2_zynq_ultra_ps_e_0_0.xdc, line 26).
 Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/zynq_ultra_ps_e_0/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 115).
 Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axi_dma_0/U0. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 118).
-Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 124).
-Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 131).
-Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/rst_ps8_0_99M/U0. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 138).
-Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axi_smc/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 166).
-Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axi_smc_1/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 196).
+Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/rst_ps8_0_99M/U0. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 124).
+Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axi_smc/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 152).
+Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axi_smc_1/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 182).
+Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/ps8_0_axi_periph/s00_couplers/auto_ds/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 185).
+Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/ps8_0_axi_periph/s01_couplers/auto_ds/inst. (constraint file  C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/dont_touch.xdc, line 192).
 Applied set_property KEEP_HIERARCHY = SOFT for design_2_i. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/zynq_ultra_ps_e_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axis_ann_0. (constraint file  auto generated constraint).
@@ -1194,17 +1198,7 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axis_ann_0/inst/ann_0/
 Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axis_ann_0/inst/ann_0/xpm_memory_tdpram_a. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_2_i/axis_ann_0/inst/ann_0/xpm_memory_tdpram_k. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:59 ; elapsed = 00:02:02 . Memory (MB): peak = 2780.621 ; gain = 1221.199
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Start Preparing Guide Design
----------------------------------------------------------------------------------
-CRITICAL WARNING: [Synth 8-6895] The reference checkpoint C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.srcs/utils_1/imports/synth_1/design_2_wrapper.dcp is not suitable for use with incremental synthesis for this design. Please regenerate the checkpoint for this design with -incremental_synth switch in the same Vivado session that synth_design has been run. Synthesis will continue with the default flow
----------------------------------------------------------------------------------
-Finished Doing Graph Differ : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 2780.621 ; gain = 1221.199
----------------------------------------------------------------------------------
----------------------------------------------------------------------------------
-Finished Preparing Guide Design : Time (s): cpu = 00:02:02 ; elapsed = 00:02:05 . Memory (MB): peak = 2780.621 ; gain = 1221.199
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:54 ; elapsed = 00:01:59 . Memory (MB): peak = 2782.258 ; gain = 1222.656
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'smpl_cs_reg' in module 'axi_dma_smple_sm'
 INFO: [Synth 8-802] inferred FSM for state register 'sig_pcc_sm_state_reg' in module 'axi_datamover_pcc'
@@ -1365,42 +1359,32 @@ INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'sequential' in module 'axi_protocol_converter_v2_1_31_b2s_rd_cmd_fsm'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:14 ; elapsed = 00:02:17 . Memory (MB): peak = 2780.621 ; gain = 1221.199
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:02:08 ; elapsed = 00:02:14 . Memory (MB): peak = 2782.258 ; gain = 1222.656
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
-
-
-Incremental Synthesis Report Summary:
-
-1. Incremental synthesis run: no
-
-   Reason for not running incremental synthesis : 
-
-
-INFO: [Synth 8-7130] Flow is switching to default flow due to incremental criteria not met. If you would like to alter this behaviour and have the flow terminate instead, please set the following parameter config_implementation {autoIncr.Synth.RejectBehavior Terminate}
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input   40 Bit       Adders := 4     
+	   3 Input   26 Bit       Adders := 1     
 	   2 Input   16 Bit       Adders := 41    
-	   3 Input   14 Bit       Adders := 1     
 	   2 Input   12 Bit       Adders := 16    
-	   2 Input    9 Bit       Adders := 8     
+	   2 Input    9 Bit       Adders := 9     
 	   4 Input    9 Bit       Adders := 6     
-	   2 Input    8 Bit       Adders := 23    
+	   2 Input    8 Bit       Adders := 24    
 	   3 Input    8 Bit       Adders := 4     
 	   4 Input    8 Bit       Adders := 14    
-	   2 Input    7 Bit       Adders := 6     
+	   2 Input    7 Bit       Adders := 4     
 	   4 Input    7 Bit       Adders := 10    
 	   3 Input    7 Bit       Adders := 2     
-	   2 Input    6 Bit       Adders := 43    
-	   2 Input    5 Bit       Adders := 36    
+	   2 Input    6 Bit       Adders := 40    
+	   2 Input    5 Bit       Adders := 37    
 	   3 Input    5 Bit       Adders := 3     
 	   4 Input    5 Bit       Adders := 8     
-	   2 Input    4 Bit       Adders := 34    
+	   2 Input    4 Bit       Adders := 36    
 	   3 Input    4 Bit       Adders := 4     
 	   4 Input    4 Bit       Adders := 10    
 	   2 Input    3 Bit       Adders := 3     
@@ -1431,20 +1415,21 @@ Detailed RTL Component Info :
 	               33 Bit    Registers := 2     
 	               32 Bit    Registers := 20    
 	               29 Bit    Registers := 8     
+	               26 Bit    Registers := 12    
 	               24 Bit    Registers := 1     
 	               23 Bit    Registers := 5     
 	               17 Bit    Registers := 3     
 	               16 Bit    Registers := 206   
-	               14 Bit    Registers := 14    
+	               14 Bit    Registers := 2     
 	               12 Bit    Registers := 16    
 	               11 Bit    Registers := 2     
 	               10 Bit    Registers := 3     
 	                9 Bit    Registers := 15    
 	                8 Bit    Registers := 150   
 	                7 Bit    Registers := 16    
-	                6 Bit    Registers := 28    
+	                6 Bit    Registers := 27    
 	                5 Bit    Registers := 53    
-	                4 Bit    Registers := 108   
+	                4 Bit    Registers := 109   
 	                3 Bit    Registers := 64    
 	                2 Bit    Registers := 61    
 	                1 Bit    Registers := 934   
@@ -1470,12 +1455,13 @@ Detailed RTL Component Info :
 	   2 Input   33 Bit        Muxes := 2     
 	   4 Input   32 Bit        Muxes := 2     
 	   2 Input   32 Bit        Muxes := 12    
+	   2 Input   26 Bit        Muxes := 5     
+	   4 Input   26 Bit        Muxes := 2     
+	   3 Input   26 Bit        Muxes := 1     
 	   2 Input   23 Bit        Muxes := 3     
 	   2 Input   17 Bit        Muxes := 1     
 	   2 Input   16 Bit        Muxes := 272   
-	   2 Input   14 Bit        Muxes := 7     
-	   4 Input   14 Bit        Muxes := 2     
-	   3 Input   14 Bit        Muxes := 1     
+	   2 Input   14 Bit        Muxes := 2     
 	   2 Input   12 Bit        Muxes := 16    
 	   2 Input   11 Bit        Muxes := 2     
 	   2 Input    9 Bit        Muxes := 11    
@@ -1503,7 +1489,7 @@ Detailed RTL Component Info :
 	   4 Input    2 Bit        Muxes := 56    
 	   5 Input    2 Bit        Muxes := 7     
 	   3 Input    2 Bit        Muxes := 7     
-	   2 Input    1 Bit        Muxes := 594   
+	   2 Input    1 Bit        Muxes := 591   
 	   6 Input    1 Bit        Muxes := 53    
 	  12 Input    1 Bit        Muxes := 6     
 	   3 Input    1 Bit        Muxes := 26    
@@ -1679,7 +1665,7 @@ INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_L
 INFO: [Synth 8-3332] Sequential element (I_RST_MODULE/REG_HRD_RST_OUT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6) is unused and will be removed from module axi_dma.
 INFO: [Synth 8-3332] Sequential element (GEN_INCLUDE_IBTTCC.I_S2MM_MSTR_IBTTCC/FSM_onehot_sig_csm_state_reg[3]) is unused and will be removed from module axi_datamover_s2mm_full_wrap.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:04:17 ; elapsed = 00:04:28 . Memory (MB): peak = 2780.621 ; gain = 1221.199
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:03:55 ; elapsed = 00:04:03 . Memory (MB): peak = 2782.258 ; gain = 1222.656
 ---------------------------------------------------------------------------------
  Sort Area is design_2__GB1 pe00/ab_0 : 0 0 : 1946 1946 : Used 1 time 0
  Sort Area is design_2__GB1 pe01/ab_2 : 0 0 : 1946 1946 : Used 1 time 0
@@ -1825,7 +1811,7 @@ Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:46 ; elapsed = 00:05:00 . Memory (MB): peak = 3755.965 ; gain = 2196.543
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:04:20 ; elapsed = 00:04:30 . Memory (MB): peak = 3773.695 ; gain = 2214.094
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
@@ -1833,7 +1819,7 @@ Start Timing Optimization
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 INFO: [Synth 8-5775] Found 'rw_addr_collision' attribute set to 'no' on SDP RAM gen_wr_a.gen_word_narrow.mem_reg. Setting write mode to NO_CHANGE 
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:05:02 ; elapsed = 00:05:17 . Memory (MB): peak = 3909.883 ; gain = 2350.461
+Finished Timing Optimization : Time (s): cpu = 00:04:34 ; elapsed = 00:04:45 . Memory (MB): peak = 3925.781 ; gain = 2366.180
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -1890,7 +1876,7 @@ INFO: [Synth 8-7052] The timing for the instance design_2_i/axis_ann_0/inst/ann_
 INFO: [Synth 8-7052] The timing for the instance design_2_i/axis_ann_0/inst/ann_0/xpm_memory_tdpram_a/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_2 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 INFO: [Synth 8-7052] The timing for the instance design_2_i/axis_ann_0/inst/ann_0/xpm_memory_tdpram_a/xpm_memory_base_inst/gen_wr_b.gen_byte_narrow.for_mem_cols[1].mem_reg_3 (implemented as a Block RAM) might be sub-optimal as no optional output register could be merged into the ram block. Providing additional output register may help in improving timing.
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:05:22 ; elapsed = 00:05:38 . Memory (MB): peak = 3983.477 ; gain = 2424.055
+Finished Technology Mapping : Time (s): cpu = 00:04:52 ; elapsed = 00:05:03 . Memory (MB): peak = 4008.500 ; gain = 2448.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -2110,37 +2096,37 @@ WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/
 WARNING: [Synth 8-5396] Clock pin C has keep related attribute (keep/mark_debug/dont_touch) which could create extra logic on its net [c:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.gen/sources_1/bd/design_2/ipshared/14b9/hdl/axi_dwidth_converter_v2_1_vlsyn_rfs.v:1911]
 INFO: [Common 17-14] Message 'Synth 8-5396' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:05:33 ; elapsed = 00:05:50 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Finished IO Insertion : Time (s): cpu = 00:05:02 ; elapsed = 00:05:13 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:05:33 ; elapsed = 00:05:50 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Finished Renaming Generated Instances : Time (s): cpu = 00:05:02 ; elapsed = 00:05:13 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:37 ; elapsed = 00:05:55 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:05:06 ; elapsed = 00:05:17 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:05:37 ; elapsed = 00:05:55 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Finished Renaming Generated Ports : Time (s): cpu = 00:05:06 ; elapsed = 00:05:17 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:05:38 ; elapsed = 00:05:56 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Finished Handling Custom Attributes : Time (s): cpu = 00:05:06 ; elapsed = 00:05:18 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:05:39 ; elapsed = 00:05:56 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Finished Renaming Generated Nets : Time (s): cpu = 00:05:07 ; elapsed = 00:05:18 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP, Shift Register and Retiming Reporting
@@ -2174,8 +2160,8 @@ Dynamic Shift Register Report:
 |dsrl__1     | INFERRED_GEN.data_reg[3] | 55     | 55         | 55     | 0       | 0      | 0      | 0      | 
 |dsrl__2     | INFERRED_GEN.data_reg[3] | 8      | 8          | 8      | 0       | 0      | 0      | 0      | 
 |dsrl__3     | INFERRED_GEN.data_reg[5] | 2      | 2          | 2      | 0       | 0      | 0      | 0      | 
-|dsrl__4     | INFERRED_GEN.data_reg[5] | 21     | 21         | 21     | 0       | 0      | 0      | 0      | 
-|dsrl__5     | INFERRED_GEN.data_reg[3] | 25     | 25         | 25     | 0       | 0      | 0      | 0      | 
+|dsrl__4     | INFERRED_GEN.data_reg[5] | 33     | 33         | 33     | 0       | 0      | 0      | 0      | 
+|dsrl__5     | INFERRED_GEN.data_reg[3] | 37     | 37         | 37     | 0       | 0      | 0      | 0      | 
 |dsrl__6     | INFERRED_GEN.data_reg[3] | 53     | 53         | 53     | 0       | 0      | 0      | 0      | 
 |dsrl__7     | shift_reg_reg            | 16     | 1          | 1      | 0       | 0      | 0      | 0      | 
 |dsrl__8     | memory_reg[3]            | 9      | 9          | 9      | 0       | 0      | 0      | 0      | 
@@ -2245,7 +2231,7 @@ Report Cell Usage:
 |      |Cell            |Count |
 +------+----------------+------+
 |1     |BUFG_PS         |     2|
-|2     |CARRY8          |   100|
+|2     |CARRY8          |   110|
 |3     |DSP_ALU         |    36|
 |4     |DSP_A_B_DATA    |    36|
 |5     |DSP_C_DATA      |    36|
@@ -2254,12 +2240,12 @@ Report Cell Usage:
 |8     |DSP_OUTPUT      |    36|
 |10    |DSP_PREADD      |    36|
 |11    |DSP_PREADD_DATA |    36|
-|12    |LUT1            |   507|
-|13    |LUT2            |  1382|
-|14    |LUT3            |  1964|
-|15    |LUT4            |   876|
-|16    |LUT5            |  1194|
-|17    |LUT6            |  1862|
+|12    |LUT1            |   506|
+|13    |LUT2            |  1405|
+|14    |LUT3            |  2056|
+|15    |LUT4            |   916|
+|16    |LUT5            |  1216|
+|17    |LUT6            |  1845|
 |18    |MUXF7           |    60|
 |19    |MUXF8           |    30|
 |20    |PS8             |     1|
@@ -2269,27 +2255,27 @@ Report Cell Usage:
 |24    |RAMB18E2        |     4|
 |27    |RAMB36E2        |    18|
 |30    |SRL16           |     3|
-|31    |SRL16E          |   339|
+|31    |SRL16E          |   367|
 |32    |SRLC32E         |    70|
 |33    |FDCE            |  1880|
 |34    |FDPE            |    66|
 |35    |FDR             |    20|
-|36    |FDRE            |  6609|
+|36    |FDRE            |  6808|
 |37    |FDSE            |   195|
 +------+----------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:05:39 ; elapsed = 00:05:56 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Finished Writing Synthesis Report : Time (s): cpu = 00:05:07 ; elapsed = 00:05:18 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 1 critical warnings and 1620 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:03:53 ; elapsed = 00:05:03 . Memory (MB): peak = 3995.902 ; gain = 2150.770
-Synthesis Optimization Complete : Time (s): cpu = 00:05:40 ; elapsed = 00:05:57 . Memory (MB): peak = 3995.902 ; gain = 2436.480
+Synthesis finished with 0 errors, 0 critical warnings and 1619 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:03:26 ; elapsed = 00:04:27 . Memory (MB): peak = 4018.941 ; gain = 2174.852
+Synthesis Optimization Complete : Time (s): cpu = 00:05:08 ; elapsed = 00:05:19 . Memory (MB): peak = 4018.941 ; gain = 2459.340
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 3995.902 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 300 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:02 . Memory (MB): peak = 4018.941 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 310 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 2 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 3995.902 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 4018.941 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 110 instances were transformed.
   DSP48E2 => DSP48E2 (DSP_ALU, DSP_A_B_DATA, DSP_C_DATA, DSP_MULTIPLIER, DSP_M_DATA, DSP_OUTPUT, DSP_PREADD, DSP_PREADD_DATA): 36 instances
@@ -2299,14 +2285,13 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   RAM32X1D => RAM32X1D (RAMD32(x2)): 4 instances
   SRL16 => SRL16E: 3 instances
 
-Synth Design complete | Checksum: 78b2e8a4
+Synth Design complete | Checksum: f3805d62
 INFO: [Common 17-83] Releasing license: Synthesis
-599 Infos, 548 Warnings, 1 Critical Warnings and 0 Errors encountered.
+602 Infos, 548 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:06:15 ; elapsed = 00:06:37 . Memory (MB): peak = 3995.902 ; gain = 3443.988
-INFO: [runtcl-6] Synthesis results are not added to the cache due to CRITICAL_WARNING
-Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.113 . Memory (MB): peak = 3995.902 ; gain = 0.000
+synth_design: Time (s): cpu = 00:05:39 ; elapsed = 00:05:54 . Memory (MB): peak = 4018.941 ; gain = 3469.309
+Write ShapeDB Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.057 . Memory (MB): peak = 4018.941 ; gain = 0.000
 INFO: [Common 17-1381] The checkpoint 'C:/altera/13.1/MSIB/vivado/AllSystolic6x6/AllSystolic6x6.runs/synth_1/design_2_wrapper.dcp' has been generated.
-write_checkpoint: Time (s): cpu = 00:00:10 ; elapsed = 00:00:09 . Memory (MB): peak = 3995.902 ; gain = 0.000
+write_checkpoint: Time (s): cpu = 00:00:08 ; elapsed = 00:00:06 . Memory (MB): peak = 4018.941 ; gain = 0.000
 INFO: [Vivado 12-24828] Executing command : report_utilization -file design_2_wrapper_utilization_synth.rpt -pb design_2_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Thu Dec 19 09:08:01 2024...
+INFO: [Common 17-206] Exiting Vivado at Mon Dec 23 15:13:11 2024...
