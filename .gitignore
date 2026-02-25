@@ -17,3 +17,7 @@
 # Vivado generated files
 *.ip_user_files/
 "@ | Out-File -FilePath .gitignore -Encoding utf8 -Append
+
+!docs/
+!docs/bd/
+!docs/bd/*.mmd
