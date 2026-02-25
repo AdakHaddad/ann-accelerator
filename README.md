@@ -8,15 +8,15 @@ This repository contains the source code and resources for the inference 6x6 ANN
 
 Generated Mermaid files:
 
-- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/ASSEMBLY_11.tcl.mmd
-- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/ASSEMBLY_6.tcl.mmd
-- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/ASSEMBLY_8.tcl.mmd
-- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/MASNYA.tcl.mmd
-- /home/runner/work/ann-accelerator/ann-accelerator/docs/bd/design_2.tcl.mmd
+- `docs/bd/ASSEMBLY_11.tcl.mmd`
+- `docs/bd/ASSEMBLY_6.tcl.mmd`
+- `docs/bd/ASSEMBLY_8.tcl.mmd`
+- `docs/bd/design_2.tcl.mmd`
+- `docs/bd/MASNYA.tcl.mmd`
 
 Preview (first diagram):
 
-`mermaid
+```mermaid
 flowchart LR
   %% Auto-generated from: ASSEMBLY_11.tcl
   n__reference["-reference"]
@@ -39,6 +39,6 @@ flowchart LR
   n_rst_ps8_0_99M -->|net| n_ps8_0_axi_periph
   n_zynq_ultra_ps_e_0 -->|net| n_zynq_ultra_ps_e_0
   n_zynq_ultra_ps_e_0 -->|net| n_rst_ps8_0_99M
-`
+```
 
 <!-- BD_MERMAID_INDEX_END -->
